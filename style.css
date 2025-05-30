@@ -1,3 +1,7 @@
+*{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 body {
   margin: 0;
 }
@@ -10,6 +14,12 @@ body {
 .bolum {
   display: flex;
   margin: 4px;
+}
+.bolum.banner {
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid black;
 }
 
 .header {
@@ -25,7 +35,13 @@ body {
 
 #topic-container {
   display: flex;
-  gap: 10px;
+  gap: 40px;
+}
+#topic-container a {
+  text-decoration: none;
+  color: black;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
 }
 
 #right-container {
@@ -58,8 +74,9 @@ body {
 }
 
 .movies {
-  height: 200px;
-  background-color: cornflowerblue;
+  /* Remove the fixed height to allow content to determine height */
+  height: 300px;
+  width: 100%;
 }
 
 .footer {
@@ -82,10 +99,203 @@ body {
   display: flex;
   align-items: center;
   gap: 6px;
-  background-color: red;
+  background-color: darkred;
   width: 120px;
   padding: 8px;
   border-width: 0;
   border-radius: 8px;
   color: white;
+  transition: transform 0.2s ease-in-out, background-color 0.3s ease;
+}
+
+#play-button:hover {
+  transform: scale(1.05);
+  background-color: maroon;
+  animation: backgroundShift2 2s ease infinite;
+}
+@keyframes backgroundShift2 {
+  0% {
+    background-color: darkred;
+  }
+  25% {
+    background-color: maroon;
+  }
+  50% {
+    background-color: darkred;
+  }
+  75% {
+    background-color: maroon;
+  }
+  100% {
+    background-color: darkred;
+  }
+  
+}
+
+.movies-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.movie-card {
+  flex: 1;
+  background-color: #222;
+  border-radius: 8px;
+  transition: transform 0.2s ease-in-out, background-color 0.3s ease;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+  background-color: #444;
+  animation: backgroundShift 2s ease infinite;
+}
+
+@keyframes backgroundShift {
+  0% {
+    background-color: #222;
+  }
+  25% {
+    background-color: #444;
+  }
+  50% {
+    background-color: #222;
+  }
+  75% {
+    background-color: #444;
+  }
+  100% {
+    background-color: #222;
+  }
+}
+
+#play-button-movie {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: darkred;
+  width: 120px;
+  padding: 8px;
+  border-width: 0;
+  border-radius: 8px;
+  color: white;
+  margin-left: 1rem;
+}
+#play-button-movie:hover {
+  background-color: black;
+}
+
+.movie-poster {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2/3;
+  object-fit: cover;
+}
+
+.movie-card h3 {
+  padding: 1rem;
+  margin: 0;
+  color: white;
+}
+
+.movie-info {
+  padding: 0 1rem 1rem;
+  margin: 0;
+  color: #999;
+  font-size: 0.9rem;
+}
+
+.bolum-footer {
+  height: 100%;
+  margin: 2rem;
+  width: calc(100% - 4rem);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* Changed to space-between */
+  align-items: center; /* Added to align items vertically */
+  margin-bottom: 1rem;
+}
+
+.footer-links-left {
+  display: flex;
+  gap: 2rem;
+}
+
+.social-media {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: center;
+}
+
+.download {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #888;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #444;
+}
+
+.social-media a {
+  text-decoration: none;
+  color: #888;
+  transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+  color: #444;
+}
+
+.bolum-footer p {
+  color: #444;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.download a {
+  text-decoration: none;
+  color: #888;
+  padding: 0.5rem 1rem;
+  border: 1px solid #888;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.download a:hover {
+  color: #444;
+  border-color: #444;
+}
+
+.social-media-container,
+.download-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-self: flex-start;
+}
+
+.section-title {
+  color: #444;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 0;
 }

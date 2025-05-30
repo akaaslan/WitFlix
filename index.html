@@ -1,6 +1,10 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <link href="style.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Witflix - Your favorite movie streaming platform">
+    <meta charset="utf-8">
+    <link href="style.css" rel="stylesheet">
     <title>Home</title>
   </head>
   <body>
@@ -15,33 +19,26 @@
           <a href="#">Topic 3</a>
         </div>
         <div id="right-container">
-          <input placeholder="Search" />
-          <img src="./assets/notification-icon.png" width="20" height="20" />
-          <img
-            src="./assets/avatar-icon.png"
-            width="20"
-            height="20"
-            id="avatar"
-          />
+          <input type="search" placeholder="Search" aria-label="Search movies" />
+          <img src="./assets/notification-icon.png" width="20" height="20" alt="Notifications" />
+          <img src="./assets/avatar-icon.png" width="20" height="20" id="avatar" alt="User avatar" />
         </div>
       </div>
       <div class="bolum banner">
         <h1>MOVIE NAME</h1>
         <div id="rating-container">
-          <div>
-            <img src="./assets/full-star-icon.png" width="20" height="20" />
-            <img src="./assets/full-star-icon.png" width="20" height="20" />
-            <img src="./assets/full-star-icon.png" width="20" height="20" />
-            <img src="./assets/full-star-icon.png" width="20" height="20" />
-            <img src="./assets/empty-star-icon.png" width="20" height="20" />
+          <div class="star-rating">
+            <img src="./assets/full-star-icon.png" width="20" height="20" alt="Full star" />
+            <img src="./assets/full-star-icon.png" width="20" height="20" alt="Full star" />
+            <img src="./assets/full-star-icon.png" width="20" height="20" alt="Full star" />
+            <img src="./assets/full-star-icon.png" width="20" height="20" alt="Full star" />
+            <img src="./assets/empty-star-icon.png" width="20" height="20" alt="Empty star" />
           </div>
-          <span style="font-weight: bold">7.3</span> IMDB
-          <span
-            style="border: 1px solid black; border-radius: 4px; padding: 2px"
-            >16+</span
-          ><span style="font-weight: bold"> 2hr 21min</span>
+          <span class="rating-score">7.3</span> IMDB
+          <span class="age-rating">16+</span>
+          <span class="duration">2hr 21min</span>
         </div>
-        <p style="width: 50%">
+        <p class="movie-description">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and
@@ -64,14 +61,97 @@
           </li>
         </ul>
         <button id="play-button">
-            <img src="./assets/play-icon.png" width="20" height="20" />
-            Play Now
+          <img class="play-icon" src="./assets/play-icon.png" width="20" height="20" alt="Play icon" />
+          Play Now
         </button>
       </div>
 
-      <div class="bolum movies"></div>
-      <div class="bolum movies"></div>
-      <div class="bolum footer"></div>
+      <section class="bolum movies">
+        <div class="movies-container">
+          <div class="movie-card">
+            <section>
+            <h3>Movie Name</h3>
+            <p class="movie-info">2023 • Action • 2h 30m</p>
+            <button id="play-button-movie">
+            <img class="play-icon-movie" src="./assets/play-icon.png" width="20" height="20" alt="Play icon" />
+             Play Now
+             </button>
+             </section>
+          </div>
+          <div class="movie-card">
+            <h3>Movie Name</h3>
+            <p class="movie-info">2023 • Drama • 1h 55m</p>
+            <button id="play-button-movie">
+          <img class="play-icon-movie" src="./assets/play-icon.png" width="20" height="20" alt="Play icon" />
+          Play Now
+        </button>
+          </div>
+          <div class="movie-card">
+            <h3>Movie Name</h3>
+            <p class="movie-info">2023 • Comedy • 1h 45m</p>
+            <button id="play-button-movie">
+          <img class="play-icon-movie" src="./assets/play-icon.png" width="20" height="20" alt="Play icon" />
+          Play Now
+        </button>
+          </div>
+        </div>
+      </section>
+      <section class="bolum movies">
+        <div class="movies-container">
+          <div class="movie-card">
+            <section>
+            <h3>Movie Name</h3>
+            <p class="movie-info">2023 • Action • 2h 30m</p>
+            <button id="play-button-movie">
+            <img class="play-icon-movie" src="./assets/play-icon.png" width="20" height="20" alt="Play icon" />
+             Play Now
+             </button>
+             </section>
+          </div>
+          <div class="movie-card">
+            <h3>Movie Name</h3>
+            <p class="movie-info">2023 • Drama • 1h 55m</p>
+            <button id="play-button-movie">
+          <img class="play-icon-movie" src="./assets/play-icon.png" width="20" height="20" alt="Play icon" />
+          Play Now
+        </button>
+          </div>
+          <div class="movie-card">
+            <h3>Movie Name</h3>
+            <p class="movie-info">2023 • Comedy • 1h 45m</p>
+            <button id="play-button-movie">
+          <img class="play-icon-movie" src="./assets/play-icon.png" width="20" height="20" alt="Play icon" />
+          Play Now
+        </button>
+          </div>
+        </div>
+      </section>
+      <div class="bolum-footer">
+        <div class="footer-links">
+          <div class="footer-links-left">
+            <a href="#">Terms of Use</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Help Center</a>
+            <a href="#">Contact Us</a>
+          </div>
+          <div class="social-media-container">
+            <p class="section-title">Social Media</p>
+            <div class="social-media">
+              <a href="#">Facebook</a>
+              <a href="#">Twitter</a>
+              <a href="#">Instagram</a>
+            </div>
+          </div>
+          <div class="download-container">
+            <p class="section-title">Apps</p>
+            <div class="download">
+              <a href="#">App Store</a>
+              <a href="#">Google Play</a>
+            </div>
+          </div>
+        </div>
+        <p>© 2023 Witflix. All rights reserved.</p>
+      </div>
     </div>
   </body>
 </html>
