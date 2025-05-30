@@ -74,7 +74,7 @@ body {
 }
 
 .movies {
-  /* Remove the fixed height to allow content to determine height */
+  
   height: 300px;
   width: 100%;
 }
@@ -220,8 +220,8 @@ body {
 .footer-links {
   display: flex;
   flex-direction: row;
-  justify-content: space-between; /* Changed to space-between */
-  align-items: center; /* Added to align items vertically */
+  justify-content: space-between; 
+  align-items: center; 
   margin-bottom: 1rem;
 }
 
